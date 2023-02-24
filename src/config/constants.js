@@ -1,8 +1,3 @@
-
-const SCREEN_TEXT = {
-  test: "Hello from Testing",
-};
-
 const COMPANY_SOCIALS = [
   {
     link: "#",
@@ -74,7 +69,6 @@ const constant = {
   COMPANY_DOCS,
   COMPANY_LINKS,
   COMPANY_SOCIALS,
-  SCREEN_TEXT,
 };
 
 export default constant;

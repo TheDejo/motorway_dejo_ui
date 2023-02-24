@@ -79,7 +79,9 @@ const FormSection = () => {
                                 onChange={handleChange}
                                 className="input input--range"
                             />
-                            <div className="salary-value">{formData[name]}</div>
+                            {formErrors[name] && (
+                                <div className="salary-value">{formData[name]}</div>
+                            )}
                         </div>
                     );
                 return (
