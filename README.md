@@ -1,9 +1,6 @@
-
 # Motorway UI Test
 
-
 Welcome to the Motorway UI technical test. This test focuses on user experience, and your skills with HTML, CSS, a11y and leveraging browser APIs.
-
 
 ## Set up
 
@@ -22,7 +19,6 @@ After this, CRA will open a tab with the app running, usually `localhost:3000`. 
 - The server and CRA are watching the relevant files and will hot reload if any changes are made.
 
 - Feel free to modify or install whatever code you feel is necessary. If installing packages which are wrappers for native browsers APIs please leave a comment explaining why.
-
 
 ## Tasks
 
@@ -48,11 +44,22 @@ Modal to review full size images
 
 Image effects or filters
 
-
 ### 2. Performance
 
 The API that is returning images is rather slow. Show how it can be sped up, and show how you would measure the improvement in performance.
 
+Answer: I refactored the api call, called the api in a custom hook, set the data to state and return that state as a memoized variable using the react hook: useMemo.
+
+To measure the performance,
+Open the React Developer Tools extension in Google Chrome .
+Select the "Profiler" tab.
+Click the "Start Profiling" button.
+Navigate to the home page.
+Allow the page to load and display the images.
+Click the "Stop Profiling" button.
+In the "Profile" panel, select the "Flamegraph" view.
+
+Do same for the initial api call.
 
 ### 3. Forms
 
@@ -66,11 +73,9 @@ Add a form to your app with the following fields. The form doesn't need to submi
 - [ ] Favourite colour
 - [ ] Salary (using a range input)
 
-
 ## Time allowed
 
 We appreciate that your time is valuable and recommend you not spend more than 2 hours on these tasks.
-
 
 ## Notes
 
