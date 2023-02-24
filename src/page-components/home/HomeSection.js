@@ -16,15 +16,15 @@ const HomeSection = () => {
     return (
         <section className='thumbnail-container'>
             {
-                images?.map(({ id, url, likes, user }, idx) => (
+                images?.map(({ id, url, likes, user, description, alt_description }, idx) => (
                     <button onClick={() => {
                         setVisible(true)
                         setCurrentIndex(idx)
                     }} key={id} className="thumbnail">
                         <span className='content-container'>
-                            <img src={`${url}.jpg`} alt={url} className='main-image' />
+                            <img src={`${url}.jpg`} alt={alt_description} className='main-image' aria-label={description} aria-labelledby={id} />
                             <span className='avatar-like-wrapper'>
-                                <img src={`${user.profile_image}.webp`} alt={user.profile_image} className='avatar' />
+                                <img src={`${user.profile_image}.webp`} alt='avatar' aria-label='avatar' aria-labelledby={idx.toString()} className='avatar' />
                                 <span className='interactions'>
                                     {like}
                                     <p>
