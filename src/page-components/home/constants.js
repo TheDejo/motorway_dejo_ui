@@ -1,5 +1,6 @@
 const SCREEN_TEXTS = {
-    likes: 'likes'
+    likes: 'likes',
+    hello: 'hello'
 }
 
 const constants = {
